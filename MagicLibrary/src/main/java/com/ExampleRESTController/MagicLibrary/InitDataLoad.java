@@ -1,8 +1,8 @@
 package com.ExampleRESTController.MagicLibrary;
 
 
-import com.ExampleRESTController.MagicLibrary.entity.Book;
-import com.ExampleRESTController.MagicLibrary.repository.BooksRepository;
+import com.ExampleRESTController.MagicLibrary.Entity.Book;
+import com.ExampleRESTController.MagicLibrary.Repository.BooksRepository;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 import org.springframework.boot.CommandLineRunner;

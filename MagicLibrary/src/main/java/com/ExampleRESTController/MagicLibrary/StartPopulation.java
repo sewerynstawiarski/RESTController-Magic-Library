@@ -1,12 +1,11 @@
 package com.ExampleRESTController.MagicLibrary;
 
 
-import com.ExampleRESTController.MagicLibrary.entity.Book;
-import com.ExampleRESTController.MagicLibrary.repository.BooksRepository;
+import com.ExampleRESTController.MagicLibrary.Entity.Book;
+import com.ExampleRESTController.MagicLibrary.Repository.BooksRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
-import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 

@@ -1,10 +1,9 @@
-package com.ExampleRESTController.MagicLibrary.repository;
+package com.ExampleRESTController.MagicLibrary.Repository;
 
-import com.ExampleRESTController.MagicLibrary.entity.Book;
+import com.ExampleRESTController.MagicLibrary.Entity.Book;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.Id;
 import java.util.List;
 
 @Repository

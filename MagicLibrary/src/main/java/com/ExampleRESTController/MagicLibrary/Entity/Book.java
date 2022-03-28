@@ -1,4 +1,4 @@
-package com.ExampleRESTController.MagicLibrary.entity;
+package com.ExampleRESTController.MagicLibrary.Entity;
 
 
 import lombok.Getter;
@@ -10,7 +10,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.time.LocalDate;
-import java.util.Objects;
 
 @Entity
 @Getter

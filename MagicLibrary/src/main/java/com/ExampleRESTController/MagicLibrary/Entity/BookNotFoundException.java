@@ -1,6 +1,4 @@
-package com.ExampleRESTController.MagicLibrary.entity;
-
-import jdk.jshell.spi.ExecutionControl;
+package com.ExampleRESTController.MagicLibrary.Entity;
 
 public class BookNotFoundException extends RuntimeException {
 
