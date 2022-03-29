@@ -4,6 +4,7 @@ package com.ExampleRESTController.MagicLibrary.Controller;
 
 import com.ExampleRESTController.MagicLibrary.BookDTO.BookDTO;
 import com.ExampleRESTController.MagicLibrary.Entity.Book;
+import com.ExampleRESTController.MagicLibrary.Entity.BookIsAvailable;
 import com.ExampleRESTController.MagicLibrary.Entity.BookNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,11 +24,21 @@ public class BooksController {
     @PostMapping ("/books")
     public ResponseEntity<Book> addBook(@RequestBody Book book){
         try {
-            return new ResponseEntity<>(bookDTO.addBook(book), HttpStatus.OK);
+            return new ResponseEntity<Book>(bookDTO.addBook(book), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+    /*@PostMapping ("/books")
+    public ResponseEntity<BookIsAvailable> addBookIsAvailable(@RequestBody BookIsAvailable book){
+        try {
+            return new ResponseEntity<BookIsAvailable>(bookDTO.addBookIsAvailable(book), HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+     */
     @PatchMapping("/books")
     public ResponseEntity<Book> updateBook(@RequestBody Book book){
         try {

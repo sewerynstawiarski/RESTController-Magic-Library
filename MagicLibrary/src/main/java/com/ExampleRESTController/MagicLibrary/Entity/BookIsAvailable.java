@@ -16,18 +16,14 @@ import java.time.LocalDate;
 @Setter
 @ToString
 @NoArgsConstructor
-public class Book {
+public class BookIsAvailable {
     @Id
     @GeneratedValue
     private int id;
-    private String title;
-    private String author;
-    private LocalDate printDate;
+    private boolean isAvailable;
 
 
-    public Book(String title, String author, LocalDate printDate) {
-        this.title = title;
-        this.author = author;
-        this.printDate = printDate;
+    public BookIsAvailable(boolean isAvailable) {
+        this.isAvailable = isAvailable;
     }
 }

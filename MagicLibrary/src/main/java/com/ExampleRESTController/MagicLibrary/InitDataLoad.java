@@ -18,11 +18,11 @@ public class InitDataLoad {
     CommandLineRunner initData(BooksRepository booksRepository) {
         return args -> {
             LocalDate localDate1 = LocalDate.of(1991, 02, 9);
-            logger.info("New book flies in: " + booksRepository.save(new Book("Harry_Potter", "J.K.Rowling", localDate1,true)));
+            logger.info("New book flies in: " + booksRepository.save(new Book("Harry_Potter", "J.K.Rowling", localDate1)));
             LocalDate localDate2 = LocalDate.of(1992, 03, 8);
-            logger.info("New book flies in: " + booksRepository.save(new Book("Unfinished_Tales", "Tolkien", localDate2,true)));
+            logger.info("New book flies in: " + booksRepository.save(new Book("Unfinished_Tales", "Tolkien", localDate2)));
             LocalDate localDate3 = LocalDate.of(1993, 04, 7);
-            logger.info("New book flies in: " + booksRepository.save(new Book("The_Lord_of_the_Ice_Garden", "Jarosław_Grzędowicz", localDate3,true)));
+            logger.info("New book flies in: " + booksRepository.save(new Book("The_Lord_of_the_Ice_Garden", "Jarosław_Grzędowicz", localDate3)));
         };
     }
 

@@ -21,13 +21,13 @@ public class StartPopulation {
     @EventListener(ApplicationReadyEvent.class)
     public void population() {
         LocalDate localDate1 = LocalDate.of(1991, 02, 9);
-        Book book1 = new Book("Harry_Potter", "J.K.Rowling", localDate1,true);
+        Book book1 = new Book("Harry_Potter", "J.K.Rowling", localDate1);
         booksRepository.save(book1);
         LocalDate localDate2 = LocalDate.of(1992, 03, 8);
-        Book book2 = new Book("Unfinished_Tales", "Tolkien", localDate2,true);
+        Book book2 = new Book("Unfinished_Tales", "Tolkien", localDate2);
         booksRepository.save(book2);
         LocalDate localDate3 = LocalDate.of(1993, 04, 7);
-        Book book3 = new Book("The_Lord_of_the_Ice_Garden", "Jarosław_Grzędowicz", localDate3,true);
+        Book book3 = new Book("The_Lord_of_the_Ice_Garden", "Jarosław_Grzędowicz", localDate3);
         booksRepository.save(book3);
     }
 }
