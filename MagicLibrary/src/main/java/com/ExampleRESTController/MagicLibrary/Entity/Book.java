@@ -6,9 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
@@ -16,6 +14,7 @@ import java.time.LocalDate;
 @Setter
 @ToString
 @NoArgsConstructor
+@Table(name = "Books")
 public class Book {
     @Id
     @GeneratedValue
@@ -23,11 +22,14 @@ public class Book {
     private String title;
     private String author;
     private LocalDate printDate;
+    @OneToOne(mappedBy = "Books")
+    BookIsAvailable bookIsAvailable;
 
 
-    public Book(String title, String author, LocalDate printDate) {
+    public Book(String title, String author, LocalDate printDate, BookIsAvailable bookIsAvailable) {
         this.title = title;
         this.author = author;
         this.printDate = printDate;
+        this.bookIsAvailable = bookIsAvailable;
     }
 }

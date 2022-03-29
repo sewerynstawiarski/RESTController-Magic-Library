@@ -1,29 +1,32 @@
 package com.ExampleRESTController.MagicLibrary.Entity;
 
 
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import java.time.LocalDate;
+
+import javax.persistence.*;
+
 
 @Entity
-@Getter
-@Setter
-@ToString
 @NoArgsConstructor
+@Setter
+@Getter
 public class BookIsAvailable {
     @Id
     @GeneratedValue
-    private int id;
+    private int BookID;
     private boolean isAvailable;
-
+    @OneToOne
+    @PrimaryKeyJoinColumn(name = "BookID")
+    Book book;
 
     public BookIsAvailable(boolean isAvailable) {
         this.isAvailable = isAvailable;
     }
 }
+
+
+
