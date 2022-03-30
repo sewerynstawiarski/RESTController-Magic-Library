@@ -14,19 +14,25 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Setter
 @Getter
+@Table(name = "BookIsAvailable")
 public class BookIsAvailable {
+    @OneToOne(fetch = FetchType.LAZY)
+    Book book;
+
     @Id
     @GeneratedValue
-    private int BookID;
+    private int ID;
+
     private boolean isAvailable;
-    @OneToOne
-    @PrimaryKeyJoinColumn(name = "BookID")
-    Book book;
+
 
     public BookIsAvailable(boolean isAvailable) {
         this.isAvailable = isAvailable;
     }
 }
+
+
+
 
 
 

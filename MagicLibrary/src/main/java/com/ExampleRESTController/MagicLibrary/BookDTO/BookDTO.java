@@ -2,7 +2,9 @@ package com.ExampleRESTController.MagicLibrary.BookDTO;
 
 
 import com.ExampleRESTController.MagicLibrary.Entity.Book;
+import com.ExampleRESTController.MagicLibrary.Entity.BookIsAvailable;
 import com.ExampleRESTController.MagicLibrary.Entity.BookNotFoundException;
+import com.ExampleRESTController.MagicLibrary.Repository.BookIsAvailableRepo;
 import com.ExampleRESTController.MagicLibrary.Repository.BooksRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,9 +16,14 @@ import java.util.List;
 public class BookDTO {
     @Autowired
     BooksRepository booksRepository;
+    @Autowired
+    BookIsAvailableRepo bookIsAvailableRepo;
 
     public Book addBook(Book book){
             return booksRepository.save(book);
+    }
+    public BookIsAvailable addBookIsAvailable(BookIsAvailable bookIsAvailable){
+        return bookIsAvailableRepo.save(bookIsAvailable);
     }
     public Book updateBook(Book book){
             return booksRepository.save(book);

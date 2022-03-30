@@ -1,6 +1,7 @@
 package com.ExampleRESTController.MagicLibrary.Entity;
 
 
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -22,14 +23,14 @@ public class Book {
     private String title;
     private String author;
     private LocalDate printDate;
-    @OneToOne(mappedBy = "Books")
-    BookIsAvailable bookIsAvailable;
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "book", fetch = FetchType.LAZY)
+    BookIsAvailable isAvailable;
 
 
-    public Book(String title, String author, LocalDate printDate, BookIsAvailable bookIsAvailable) {
+    public Book(String title, String author, LocalDate printDate, BookIsAvailable isAvailable) {
         this.title = title;
         this.author = author;
         this.printDate = printDate;
-        this.bookIsAvailable = bookIsAvailable;
+        this.isAvailable = isAvailable;
     }
 }
