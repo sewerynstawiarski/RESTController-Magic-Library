@@ -4,4 +4,5 @@ import com.ExampleRESTController.MagicLibrary.Entity.BookIsAvailable;
 import org.springframework.data.repository.CrudRepository;
 
 public interface BookIsAvailableRepo extends CrudRepository<BookIsAvailable, Integer> {
+    BookIsAvailable findBookIsAvailableByStatusId(int id);
 }

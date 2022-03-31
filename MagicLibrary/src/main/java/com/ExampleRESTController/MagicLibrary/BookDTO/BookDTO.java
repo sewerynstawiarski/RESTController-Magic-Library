@@ -19,12 +19,11 @@ public class BookDTO {
     @Autowired
     BookIsAvailableRepo bookIsAvailableRepo;
 
+
     public Book addBook(Book book){
             return booksRepository.save(book);
     }
-    public BookIsAvailable addBookIsAvailable(BookIsAvailable bookIsAvailable){
-        return bookIsAvailableRepo.save(bookIsAvailable);
-    }
+
     public Book updateBook(Book book){
             return booksRepository.save(book);
     }
@@ -44,5 +43,6 @@ public class BookDTO {
     public void deleteBookByID (int id) {
         booksRepository.deleteById(id);
     }
+    public BookIsAvailable BookIsAvailable(int id) { return bookIsAvailableRepo.findBookIsAvailableByStatusId(id);}
 }
 

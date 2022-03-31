@@ -69,4 +69,8 @@ public class BooksController {
     public void deleteBookByID (@PathVariable("id") int id) {
             bookDTO.deleteBookByID(id);
     }
+    @GetMapping("/books/status/{id}")
+    public Optional<BookIsAvailable> BookIsAvailable(@PathVariable("id") int id) {
+        return Optional.ofNullable(bookDTO.BookIsAvailable(id));
+    }
 }
